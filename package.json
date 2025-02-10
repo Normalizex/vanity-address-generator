@@ -1,0 +1,16 @@
+{
+    "name": "vanity-address-generator",
+    "version": "1.0.0",
+    "description": "Ethereum vanity address generator",
+    "main": "main.js",
+    "scripts": {
+      "start": "electron ."
+    },
+    "dependencies": {
+      "ethers": "^5.7.0"
+    },
+    "devDependencies": {
+      "electron": "^25.0.0"
+    }
+  }
+  

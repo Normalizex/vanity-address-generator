@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vanity Address Generator</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            background-color: #222;
+            color: #eee;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            margin-left: 10px;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            border-radius: 5px;
+        }
+
+        #generate {
+            cursor: pointer;
+        }
+
+        #drag-region {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background-color: #222;
+            /* same as the main background color */
+            -webkit-app-region: drag;
+            z-index: 100;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+    </style>
+    <div id="drag-region"></div>
+    <div id="content"></div>
+</head>
+
+<body>
+    <div class="text-center">
+        <h1>💎Vanity💎 Address Generator</h1>
+        <p>
+            By Prefix:
+            <input type="text" id="prefix" placeholder="Enter prefix" />
+            <button id="generate">Start</button>
+        </p>
+    </div>
+    <details>
+        <summary>Logging</summary>
+        <div>
+            <div id="result">
+                <p><strong>Address:</strong> <span id="generatedAddress">?</span></p>
+                <p><strong>Private Key:</strong> <span id="generatedPrivateKey">?</span></p>
+                <p><strong>Attempts:</strong> <span id="generatedCount">0</span></p>
+            </div>
+        </div>
+    </details>
+
+    <script src="renderer.js"></script>
+</body>
+
+</html>
